@@ -1,0 +1,47 @@
+🔹 1. Initialization
+Step 1: Set front = -1 and rear = -1
+
+
+🔹 2. Enqueue Operation (Insertion)
+Step 1: Check if queue is full
+        IF ( (rear + 1) % n == front )
+            PRINT "Overflow" and EXIT
+
+Step 2: IF (front == -1 AND rear == -1)
+            front = 0
+            rear = 0
+        ELSE
+            rear = (rear + 1) % n
+
+Step 3: queue[rear] = value
+Step 4: PRINT value inserted
+
+
+
+🔹 3. Dequeue Operation (Deletion)
+Step 1: Check if queue is empty
+        IF (front == -1)
+            PRINT "Underflow" and EXIT
+
+Step 2: STORE queue[front] in temp
+
+Step 3: IF (front == rear)
+            front = -1
+            rear = -1
+        ELSE
+            front = (front + 1) % n
+
+Step 4: PRINT temp deleted
+
+
+🔹 4. Display Queue
+Step 1: IF (front == -1)
+            PRINT "Queue is Empty" and EXIT
+
+Step 2: SET i = front
+
+Step 3: WHILE (i != rear)
+            PRINT queue[i]
+            i = (i + 1) % n
+
+Step 4: PRINT queue[rear]
